@@ -12,19 +12,21 @@ function App() {
       title: "Card title",
       text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
       Description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-      button: "Go somewhere",
+      button: "Delete",
+    },
+    {
+      title: "Card title",
+      text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+
+      Description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      button: "Delete",
     },
     {
       title: "Card title",
       text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
       Description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-      button: "Go somewhere",
-    },
-    {
-      title: "Card title",
-      text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-      Description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-      button: "Go somewhere",
+
+      button: "Delete",
     },
   ]);
 
