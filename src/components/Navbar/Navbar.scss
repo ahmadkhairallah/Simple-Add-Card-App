@@ -1,0 +1,36 @@
+.navbar {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 1rem;
+    margin: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    .navbar-nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-item {
+        margin-right: 1rem;
+        transition: 0.3s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .nav-link {
+        color: #000;
+        text-decoration: none;
+        transition: 0.3s;
+
+        &:hover {
+            color: #007bff;
+        }
+    }
+}
