@@ -10,10 +10,10 @@ function Navbar({ handleAdd }) {
                 </li>
                 
                 <li className="nav-item">
-                    <Link to="/add-card" className="nav-link">Add Form</Link>
+                    <Link to="/add-card" className="nav-link">Add Card</Link>
                 </li>
                 <li className="nav-item">
-                    <a href="#" className="nav-link" onClick={handleAdd}>Add</a>
+                    <Link to={"/login"} href="#" className="nav-link" onClick={handleAdd}>LogOut</Link>
                 </li>
             </ul>
         </nav>

@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AddCardPage from './Pages/AddCardPage'; 
+import Login from './Pages/Login';
 
 function App() {
   const [nameList, setNameList] = useState([
@@ -41,8 +42,10 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar handleAdd={addCard} />
+      <Navbar/>
         <Routes>
+          <Route path="/login" element={<Login />} />
+          {/* <Route path='/' element={<Navbar/>}/> */}
           <Route path="/" element={<Card nameList={nameList} onDelete={handleDelete} />} />
           <Route path="/add-card" element={<AddCardPage onAddCard={addCard} />} />
         </Routes>
