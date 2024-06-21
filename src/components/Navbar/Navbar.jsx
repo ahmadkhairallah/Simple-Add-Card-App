@@ -6,7 +6,7 @@ function Navbar({ handleAdd }) {
         <nav className="navbar">
             <ul className="navbar-nav">
                 <li className="nav-item">
-                    <Link to="/" className="nav-link">Home</Link>
+                    <Link to="/Home" className="nav-link">Home</Link>
                 </li>
                 
                 <li className="nav-item">

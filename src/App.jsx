@@ -2,8 +2,8 @@
 import './App.css';
 import Card from './components/Card/Card';
 import Navbar from './components/Navbar/Navbar';
-import { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 import AddCardPage from './Pages/AddCardPage'; 
 import Login from './Pages/Login';
 
@@ -18,7 +18,6 @@ function App() {
     {
       title: "Card title",
       text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-
       Description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
       button: "Delete",
     },
@@ -26,7 +25,6 @@ function App() {
       title: "Card title",
       text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
       Description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-
       button: "Delete",
     },
   ]);
@@ -42,16 +40,25 @@ function App() {
   return (
     <Router>
       <div className="App">
-      <Navbar/>
+        <Navbar />
         <Routes>
           <Route path="/login" element={<Login />} />
-          {/* <Route path='/' element={<Navbar/>}/> */}
-          <Route path="/" element={<Card nameList={nameList} onDelete={handleDelete} />} />
+          <Route path="/home" element={<Card nameList={nameList} onDelete={handleDelete} />} />
           <Route path="/add-card" element={<AddCardPage onAddCard={addCard} />} />
+          <Route path="/" element={<RedirectToLogin />} />
         </Routes>
       </div>
     </Router>
   );
+}
+
+function RedirectToLogin() {
+  const navigate = useNavigate();
+  useEffect(() => {
+    navigate('/login');
+  }, [navigate]);
+
+  return null;
 }
 
 export default App;

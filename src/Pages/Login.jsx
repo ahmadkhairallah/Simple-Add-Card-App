@@ -43,7 +43,7 @@ function Login() {
                       
                         </div>
                         <div className="btn">
-                            <Link className="btn" to="/" disabled={chickDisable()} type="submit">Login</Link>
+                            <Link className="btn" to="/Home" disabled={chickDisable()} type="submit">Login</Link>
                         </div>
                         <div className="forget">
                             <a href="#">Forget Password?</a>
